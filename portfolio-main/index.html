@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHARATHKUMAR B | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#64748b',
+                        accent: '#0ea5e9',
+                        bgDark: '#0f172a',
+                        cardDark: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply font-sans bg-white dark:bg-bgDark text-slate-900 dark:text-slate-100 transition-colors duration-300; }
+            h1, h2, h3 { @apply font-serif; }
+        }
+        @layer components {
+            .btn { @apply inline-flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 transform active:scale-95; }
+            .btn-primary { @apply bg-primary text-white hover:bg-blue-600 shadow-lg shadow-blue-500/30; }
+            .btn-secondary { @apply bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-700; }
+            .glass { @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-white/20 dark:border-slate-800/50 shadow-xl; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <div class="logo text-xl font-bold tracking-tight text-primary">BHARATHKUMAR B</div>
+            <ul class="hidden md:flex space-x-8 text-sm font-medium">
+                <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
+                <li><a href="#work" class="hover:text-primary transition-colors">Work</a></li>
+                <li><a href="#skills" class="hover:text-primary transition-colors">Skills</a></li>
+                <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Toggle theme">
+                    <svg class="sun-icon hidden dark:block" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon block dark:hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://github.com/bharathkumarbalasubramanian" target="_blank" class="hidden sm:inline-flex btn btn-secondary text-sm">GitHub</a>
+                <a href="https://www.linkedin.com/in/bharathkumar-b-a583932a5" target="_blank" class="btn btn-primary text-sm">LinkedIn</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-32 pb-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Visual -->
+                <div class="relative flex justify-center lg:justify-end order-1 lg:order-2 reveal">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 flex items-center justify-center">
+                        <!-- Advanced Pulsing Rings -->
+                        <div class="absolute inset-0 rounded-full border border-primary/20 animate-ping opacity-20"></div>
+                        <div class="absolute inset-4 rounded-full border border-blue-400/30 animate-[pulse_3s_infinite] opacity-40"></div>
+                        <div class="absolute inset-8 rounded-full border border-cyan-400/40 animate-[pulse_4s_infinite] opacity-60"></div>
+                        <div class="absolute inset-12 rounded-full border border-blue-500/50 animate-[pulse_5s_infinite] opacity-80"></div>
+                        
+                        <!-- Photo Container -->
+                        <div class="relative w-64 h-64 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl z-10 transition-transform hover:scale-105 duration-500 mx-auto lg:mx-0">
+            <img src="my photo.jpeg" alt="BHARATHKUMAR B" 
+     class="w-full h-full object-cover object-center" 
+     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Bharathkumar+B&background=0e5e8d&color=fff&size=512'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Text -->
+                <div class="space-y-8 order-2 lg:order-1 reveal">
+                    <div class="inline-block">
+                        <span class="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
+                            AI Product Manager
+                        </span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-cyan-400">BHARATHKUMAR B</span><br>
+                        Defining the frontier of AI Product Management.
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
+                        B.Tech student specialized in Artificial Intelligence at DSU Trichy, dedicated to bridging the gap between cutting-edge Machine Learning and high-impact product solutions.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-4" id="hero-stats">
+                        <div class="p-4 rounded-2xl glass text-center group hover:bg-primary/5 transition-colors">
+                            <span class="block text-2xl font-bold text-primary" id="stat-projects">10+</span>
+                            <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Projects Built</span>
+                        </div>
+                        <div class="p-4 rounded-2xl glass text-center group hover:bg-primary/5 transition-colors">
+                            <span class="block text-2xl font-bold text-primary italic" id="stat-models">5+</span>
+                            <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">AI Models Used</span>
+                        </div>
+                        <div class="p-4 rounded-2xl glass text-center group hover:bg-primary/5 transition-colors">
+                            <span class="block text-2xl font-bold text-primary italic" id="stat-impact">Impact</span>
+                            <span class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Driven Focus</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#work" class="btn btn-primary group">
+                            View My Work 
+                            <svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12 reveal">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">About Me</h2>
+                    <div class="h-1.5 w-20 bg-primary mt-4 rounded-full"></div>
+                </div>
+                
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-2 space-y-8 reveal">
+                        <div class="flex gap-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 transition-colors duration-300 border border-transparent hover:border-blue-100 dark:hover:border-blue-900 shadow-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-primary">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">My Journey</h3>
+                                <p class="text-slate-600 dark:text-slate-400">I'm a B.Tech student specializing in AI and Data Science at DSU Trichy (2023-2027). I am deeply interested in how AI can solve real-world problems and I'm currently focused on building a strong foundation in machine learning and product thinking.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 transition-colors duration-300 border border-transparent hover:border-blue-100 dark:hover:border-blue-900 shadow-sm">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-primary">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">What I Bring</h3>
+                                <p class="text-slate-600 dark:text-slate-400">I specialize in transforming complex technical capabilities into user-friendly products. My approach combines data-driven decision making with rapid experimentation to solve real-world needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal">
+                        <div class="p-8 rounded-3xl glass backdrop-blur-xl border border-blue-100 dark:border-slate-800 sticky top-32">
+                            <div class="flex items-center gap-4 mb-8">
+                                <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                                </div>
+                                <h4 class="text-lg font-bold">Education</h4>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="p-4 rounded-2xl bg-white/50 dark:bg-slate-800/50">
+                                    <h4 class="font-bold text-primary">B.TECH AI&DS</h4>
+                                    <p class="text-sm text-slate-500">DSU TRICHY | 2023-2027</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-extrabold mb-4">Featured Work</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto">A selection of projects where I've driven measurable impact through strategic product thinking and execution.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                    <!-- Projects will be loaded from API -->
+                </div>
+
+                <div class="mt-16 text-center reveal">
+                    <a href="https://github.com/bharathkumarbalasubramanian" target="_blank" class="inline-flex items-center text-primary font-bold hover:underline">
+                        See All Projects on GitHub
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 reveal">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Skills of Expertise</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto uppercase tracking-widest text-[10px] font-bold">Strategic blend of technical depth and product leadership</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Technical Skills -->
+                    <div class="p-8 rounded-3xl glass border border-white dark:border-slate-800 shadow-sm transition-all duration-300 hover:shadow-xl">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-primary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            </div>
+                            <h3 class="text-lg font-bold">Technical Skills</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700">SQL</span>
+                            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700">Tableau</span>
+                            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700">Firebase</span>
+                        </div>
+                    </div>
+
+                    <!-- Product Management -->
+                    <div class="p-8 rounded-3xl glass border border-white dark:border-slate-800 shadow-sm transition-all duration-300 hover:shadow-xl">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                            </div>
+                            <h3 class="text-lg font-bold">Product Management</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700">New Product Development</span>
+                            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700">A/B Testing</span>
+                            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700">GTM Strategy</span>
+                        </div>
+                    </div>
+
+                    <!-- Agile & Scrum -->
+                    <div class="p-8 rounded-3xl glass border border-white dark:border-slate-800 shadow-sm transition-all duration-300 hover:shadow-xl">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-10 h-10 rounded-xl bg-green-100 dark:bg-green-900/40 flex items-center justify-center text-green-600 dark:text-green-400">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                            </div>
+                            <h3 class="text-lg font-bold">Agile & Scrum</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700">Sprint Planning</span>
+                            <span class="px-3 py-1 bg-white/50 dark:bg-slate-800/50 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700">PRD Creation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career Highlights -->
+                <div class="mt-12 p-10 rounded-3xl glass border border-white dark:border-slate-800 reveal">
+                    <div class="grid sm:grid-cols-2 gap-8">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 flex-shrink-0 text-primary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <span class="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">Managed development of <span class="text-primary font-bold">2+ products</span> serving APAC organizations.</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 flex-shrink-0 text-primary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <span class="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">Enhanced client satisfaction by <span class="text-primary font-bold">30%</span> via core design improvements.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-4 block underline decoration-2 underline-offset-4">Let's Connect</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold max-w-4xl mx-auto leading-tight">I'm currently open to AI APM and Product Management roles. Let's discuss.</h2>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="space-y-6 reveal">
+                        <a href="mailto:bharathkumar3067@gmail.com" class="group flex items-center gap-6 p-6 rounded-2xl glass border border-white dark:border-slate-800 hover:border-primary/30 transition-all duration-300">
+                            <div class="w-14 h-14 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold opacity-60">Email</h4>
+                                <p class="text-lg font-bold group-hover:text-primary transition-colors">bharathkumar3067@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/bharathkumar-b-a583932a5" target="_blank" class="group flex items-center gap-6 p-6 rounded-2xl glass border border-white dark:border-slate-800 hover:border-primary/30 transition-all duration-300">
+                            <div class="w-14 h-14 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold opacity-60">LinkedIn</h4>
+                                <p class="text-lg font-bold group-hover:text-primary transition-colors">linkedin.com/in/bharathkumar-b</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="p-10 rounded-3xl bg-slate-900 text-white relative overflow-hidden group reveal">
+                        <div class="relative z-10 space-y-8">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">What I'm Looking For</h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                                        <span class="text-slate-400"><strong>Industries:</strong> AI Research, Machine Learning, SaaS</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                                        <span class="text-slate-400"><strong>Roles:</strong> AI Product Manager, Associate PM</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <a href="resume.pdf" target="_blank" class="w-full btn btn-primary justify-center py-5 text-base">Download Resume (PDF)</a>
+                                <p class="text-[10px] text-center text-slate-500 italic uppercase tracking-widest">Place your resume.pdf in the project folder</p>
+                            </div>
+                        </div>
+                        <!-- Background glow effect -->
+                        <div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl transition-all duration-700 group-hover:bg-primary/40"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-slate-500">© 2026 BHARATHKUMAR B. Designed with Precision & Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

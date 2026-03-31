@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+
+# Environment Variables
+.env
+secret.py
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# Build and Dist
+build/
+dist/
+*.egg-info/
+
+# Frontend (if needed)
+node_modules/
+.DS_Store
